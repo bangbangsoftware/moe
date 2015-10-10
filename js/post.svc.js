@@ -40,6 +40,7 @@ class PostSvc {
 
         var deferred = this.$q.defer();
         this.stopTimer();
+        // @TODO replace with $interval as it works better with protractor tests
         this.timer = this.$timeout(function() {
             deferred.resolve(post);
         }, this.postAfter);
