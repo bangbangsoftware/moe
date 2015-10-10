@@ -10,28 +10,29 @@ function PostDrv($log, postSvc, $timeout) {
     return directive;
 
     function link(scope, element, attrs) {
-        $log.debug("boom");
+        $log.debug("post directive");
         $log.debug(scope);
+
         scope.do = postSvc;
-        scope.do.getPosts().then(posts => {
-            scope.posts = posts;
-            $log.debug(posts);
-        });
+        scope.posts = scope.do.getPosts();
+        $log.debug(scope.posts);
+
         scope.display = function(post) {
             scope.data = JSON.parse(post.$value);
         }
+
         scope.typing = function(post) {
             scope.message = "Typing:";
             scope.do.startTimer(post, scope).then(function(post) {
                 scope.sendPost(post);
             });
         }
+
         scope.sendPost = function(post) {
             scope.do.addPost(post);
             scope.post = "";
             scope.message = `posted "${post}"`;
         }
-
 
     }
 }

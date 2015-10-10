@@ -49,13 +49,7 @@ class PostSvc {
 
     getPosts() {
         this.$log.debug("get them posts....");
-        var deferred = this.$q.defer();
-        var data = this.posts.map(function(post) {
-            return JSON.parse(post);
-        });
-        deferred.resolve(this.posts);
-        return deferred.promise;
-        //    return this.$http.get('https://api.github.com/users').then(r => r.data);
+        return this.posts;
     }
 
     static factory($http, $log, $timeout, $q, $firebaseArray) {
