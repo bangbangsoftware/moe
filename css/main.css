@@ -1,0 +1,35 @@
+body {
+    margin: 10;
+    border: 0px solid black;
+}
+
+.top {
+    color: #5F3A3A;
+}
+
+.list-item {
+    color: #1B1B96;
+}
+
+.titlebar {
+    background-color: #485294;
+}
+
+.whatnow {
+    background-color: #6B7ADE;
+}
+
+
+.text {
+    background: white;    
+    background-color: white;
+    border: 1px solid black;
+}
+
+#gifs > img {
+    display: block;
+    float: left;
+    width: 50vw;
+    height: 50vh;
+    object-fit: cover;
+}

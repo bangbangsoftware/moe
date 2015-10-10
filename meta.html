@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" ng-app="whatNow">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mick Carter's example code..</title>
+</head>
+
+<body>
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script>
+        System.import('./js/app');
+    </script>
+
+    <md-toolbar layout="row">
+        <div class="md-toolbar-tools">
+            <h1>Example Code</h1>
+        </div>
+    </md-toolbar>
+    <div layout="row" class="top" layout-wrap>
+        <md-content flex layout-padding>
+            <p>Here is tiny angular app to help take minutes or make quick notes.
+                The main feature being, when you stop typing it auto posts.</p>
+
+            <p>This is an example of some my angular 1.x code using ec2015 syntax
+                and firebase. To help show the workings it isn't minified so may
+                be a bit slow to load</p>
+        </md-content>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h1>Current Project</h1>
+            </div>
+        </md-toolbar>
+
+        <md-content flex layout-padding>
+            <p>Unfortunetly I cannot show the proprietary code I do day-to-day, but
+                here is some folked MIT licenced libs which HSS use <a href="https://github.com/hss-dev">https://github.com/hss-dev</a>.</p>
+
+            <p>I scrum master a team currently working on a reporting angular 1.4 app with spring
+                boot backend. The last sprint goals where "addendums" and "drafts".
+                This made use of stomp <b>websockets</b> which works well even when we use nginx to route the traffic. Our build tools include: grunt, jasmine, karma (80% coverage) and I try to keep our code up to date in terms of migrating to angular 2 when it arrives, but also so we can take advantage of any new tech that might help us. We use jenkins, gitlab (in a docker container) as our ci infrastructure</p>
+        </md-content>
+    </div>
+
+
+    <div layout="row"  >
+        <div flex="50" >
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h1>ANGULAR</h1>
+                </div>
+            </md-toolbar>
+        </div>
+        <div flex="50" >
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h1>TECH</h1>
+                </div>
+            </md-toolbar>
+        </div>
+    </div>
+
+
+    <div layout="row" layout-wrap>
+        <div flex="50" class="whatnow" layout-padding>
+            <post></post>
+        </div>
+
+        <div flex="50" layout-padding>
+            <iframe width="645" height="300" src="https://www.youtube.com/embed/wlNEKHDbK5E"
+            frameborder="0" allowfullscreen></iframe>
+            <iframe width="645" height="300" src="https://www.youtube.com/embed/iukBMY4apvI"
+            frameborder="0" allowfullscreen></iframe>
+            <iframe width="645" height="300" src="https://www.youtube.com/embed/8aGhZQkoFbQ"
+            frameborder="0" allowfullscreen></iframe>
+            <iframe width="645" height="300" src="https://www.youtube.com/embed/tIm8UkSf6RA"
+            frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+
+</html>

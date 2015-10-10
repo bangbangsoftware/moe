@@ -1,0 +1,39 @@
+<div>
+    <div>
+        <form>
+            <md-content md-theme="docs-dark" layout-padding layout="row" layout-sm="column">
+                <md-input-container flex="80">
+                    <label>What Now?!</label>
+                    <textarea class="text" tabindex=0 ng-change="typing(post)" ng-model="post"></textarea>
+                </md-input-container>
+                <md-button flex="20" ng-click="sendPost(post)" class="md-raised">Post</md-button>
+            </md-content>
+        </form>
+        <hr>
+        <h1 ng-click="bang()">{{message}} {{post}}</h1>
+
+        <md-list>
+            <md-list-item class="md-1-line list-item" ng-repeat="post in posts">
+                <!-- processed here to work better with firebase -->
+                {{display(post)}}
+                <div layout="row" class="md-list-item-text">
+                    <div flex="10" flex-order="1" flex-order-gt-md="2" layout-padding>
+                        <md-button title="delete post" aria-label="delete" layout-align="center center"
+                        class="md-raised" ng-click="do.remove(post)">
+                            <ng-md-icon icon="delete" size="48">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12">
+                                    <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12z"></path>
+                                    <path d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"></path>
+                                </svg>
+                            </ng-md-icon>
+                        </md-button>
+                    </div>
+                    <div flex flex-order="2" layout-padding>
+                        {{::data.postedAt | date:'dd MMM HH:mm'}} - {{ ::data.text }}
+                    </div>
+                </div>
+            </md-list-item>
+            <md-divider></md-divider>
+        </md-list>
+    </div>
+</div>
