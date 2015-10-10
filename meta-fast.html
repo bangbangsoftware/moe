@@ -8,12 +8,14 @@
 
 <body>
     <script src="jspm_packages/system.js"></script>
-    <script src="config.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--
+    <script src="config.js"></script>
     <script>
         System.import('./js/app');
     </script>
-
+    -->
+    <script src="build.js"></script>
     <md-toolbar layout="row">
         <div class="md-toolbar-tools">
             <h1>Example Code</h1>
@@ -26,8 +28,9 @@
                 the 'what now' box and start typing.</p>
 
             <p>This is an example of angular 1.x code using ec2015 syntax and firebase.
-                To help show the workings it isn't minified, so it might be a bit slow
-                to load, to see a faster version go <a href="meta-fast">here</a>. The source for this is on github here:
+                This has been minified, but if you want to see the workings a bit
+                more, look at this <a href="meta.html">page</a>. The source for
+                this is on github here:
                 <a target="_blank" href="https://github.com/bangbangsoftware/moe">https://github.com/bangbangsoftware/moe</a>.</p>
         </md-content>
         <md-toolbar>
@@ -41,15 +44,14 @@
                 here is some folked MIT licenced libs which HSS use <a target="_blank"
                 href="https://github.com/hss-dev">https://github.com/hss-dev</a>.</p>
 
-            <p>I'm currently the scrum master on a team working on a reporting angular 1.4
-                app with spring boot backend. The last sprint goals where "addendums"
+            <p>I'm currently the scrum master on a team working on a reporting angular
+                1.4 app with spring boot backend. The last sprint goals where "addendums"
                 and "drafts". This made use of stomp <b>websockets</b> which works
                 well even when we use nginx to route the traffic. Our build tools
-                include: grunt, jasmine, karma (80% coverage). I keep
-                our code up to date in terms of migrating to angular 2 when it
-                arrives and also so we can take advantage of any new tech that
-                might help us. We use jenkins, gitlab (in a docker container) as
-                our ci infrastructure</p>
+                include: grunt, jasmine, karma (80% coverage). I keep our code
+                up to date in terms of migrating to angular 2 when it arrives and
+                also so we can take advantage of any new tech that might help us.
+                We use jenkins, gitlab (in a docker container) as our ci infrastructure.</p>
         </md-content>
     </div>
 
