@@ -85,11 +85,13 @@ describe('Post', function() {
         expect(scope.message).toBe("posted \"bango!\"");
     });
 
+    // @TODO
     it('should add to last post if last post was within the last minute', function() {
         expect(false).toBe(false);
 
     });
 
+    // @TODO
     it('should be able to tag with short cut keys', function() {
         expect(false).toBe(false);
 
